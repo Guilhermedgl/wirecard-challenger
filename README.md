@@ -14,17 +14,20 @@ but here's a short guidance:
 - GET - http://localhost:3000/status
   the api response to you all the payments
 - GET - http://localhost:3000/status/:id
-  The api response with the specific payment id on params.
+ The api response with the specific payment id on params.
 
 - BODY - FORM-URLENCODED
 - The keys are:
-    - client
-    - name
-    - email
-    - cpf
-    - amount
-    - type (Boleto or Credit Card)
-    - cardName
-    - cardNumber
-    - cardExp
-    - cardCvv
+  - client
+  - name
+  - email
+  - cpf
+  - amount
+  - type (Boleto or Credit Card)
+  - cardName
+  - cardNumber
+  - cardExp
+  - cardCvv
+
+## Stack
+Node.JS, Express.JS and MongoDB.
