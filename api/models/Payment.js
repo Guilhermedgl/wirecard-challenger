@@ -10,7 +10,9 @@ const paymentSchema = new Schema({
     type: String, enum: ['Credit Card', 'Boleto']
   },
   card: { type: Schema.Types.ObjectId, ref: 'card' },
-  status: String,
+  buyer: { type: Schema.Types.ObjectId, red: 'buyer' },
+  client: { type: Schema.Types.ObjectId, red: 'client' },
+  status: String
 },
 {
   timestamps: {

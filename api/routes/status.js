@@ -15,12 +15,8 @@ status.get('/', (req, res, next) => {
 
 status.get('/:id', (req, res, next) => {
   Payment.findOne({ _id: req.params.id })
-    .populate('card')
     .then((response) => {
       res.status(200).json(response);
-    })
-    .catch((error) => {
-      console.log(error);
     });
 });
 

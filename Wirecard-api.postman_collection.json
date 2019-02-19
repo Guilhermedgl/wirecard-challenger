@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "a895710e-6cf8-499b-87ce-377f87b20403",
+		"name": "Wirecard-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client",
+							"value": "Wirecard",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Mateus Felix",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "gui@gui.com",
+							"type": "text"
+						},
+						{
+							"key": "cpf",
+							"value": "83719837198731",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "50",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "Credit Card",
+							"type": "text"
+						},
+						{
+							"key": "cardName",
+							"value": "Mateus Felix",
+							"type": "text"
+						},
+						{
+							"key": "cardNumber",
+							"value": "123456789",
+							"type": "text"
+						},
+						{
+							"key": "cardExp",
+							"value": "1002",
+							"type": "text"
+						},
+						{
+							"key": "cardCvv",
+							"value": "1002",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				},
+				"description": "POST route to create a new payment, buyer, client, card and persist the information in the database.\n\nSelect BODY and FORM-URLENCODED.\n\nThe keys are:\nclient\nname\nemail\ncpf\namount\ntype (Credit Card or Boleto)\n(if type is boleto you can just send or if is credit card continue with card information) \ncardName\ncardNumber\ncardExp\ncardCvv\n\n"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/status/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/status/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"status",
+						""
+					]
+				},
+				"description": "Gets all payments from database"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/status/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/status/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"status",
+						""
+					]
+				},
+				"description": "get unique payment (complete URL with the payments id)"
+			},
+			"response": []
+		}
+	]
+}
